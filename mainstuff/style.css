@@ -3,3 +3,41 @@
     padding: 0;
     box-sizing: border-box;
   }
+body{
+      background: url(https://images6.alphacoders.com/107/1072679.jpg) no-repeat;
+      background-size: cover;
+  }
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+ }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .banner{
+      height: 640px;
+      width: 268px;
+      background: url("https://media.valorant-api.com/playercards/4dce4142-44bf-32e5-6f51-7e905389502c/largeart.png");
+      background-size: cover;
+  }
