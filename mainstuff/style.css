@@ -41,3 +41,9 @@ body{
       background: url("https://media.valorant-api.com/playercards/4dce4142-44bf-32e5-6f51-7e905389502c/largeart.png");
       background-size: cover;
   }
+
+.text{
+  font-size: 2rem;
+  color: white;
+
+}
