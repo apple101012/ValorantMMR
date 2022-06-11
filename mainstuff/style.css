@@ -41,9 +41,39 @@ body{
       background: url("https://media.valorant-api.com/playercards/4dce4142-44bf-32e5-6f51-7e905389502c/largeart.png");
       background-size: cover;
   }
-
+/* all text */
 .text{
   font-size: 2rem;
   color: white;
+}
 
+/* for the form */
+form{
+  position: relative;
+  width: 30rem;
+  display: flex;
+}
+input{
+  width: 100%;
+  border:3px solid rgb(27, 162, 27);
+  border-right: none;
+  padding: 5px;
+  height: 3rem;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #8ec1a99e;
+  font-size: 1.5rem;
+}
+input:focus{
+  color: #9DBFAF;
+}
+button{
+  padding: 5px;
+ font-size: 1.5rem;
+ border:1px solid rgb(27, 162, 27);
+ background: rgb(27, 162, 27);
+ color: white;
+ border-radius: 0 5px 5px 0;
+ cursor: pointer;
+ text-align: center;
 }

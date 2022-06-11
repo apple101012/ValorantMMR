@@ -7,16 +7,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
 </head>
 <body>
     <div class="split left">
         <div class="centered">
     <div class="search">
         <div class="title"></div>
-        <form action="" class="form_" >
-            <input type="search" name="q" class="searchbox" placeholder="Enter Username" >
-            <button>Search</button>
+        <form action="submit" class="form_ search-bar">
+            <input type="search" name="search" pattern=".*\S.*" class="searchbox" placeholder="NAME#ID">
+            <button class="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
         </form>
+    
     </div>
 </div>
 </div>
