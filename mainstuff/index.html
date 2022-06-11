@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js"></script>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+  </head>
 
-</head>
-<body>
+  <body>
     <div class="split left">
-        <div class="centered">
-    <div class="search">
-        <div class="title"></div>
-        <form action="submit" class="form_ search-bar">
-            <input type="search" name="search" pattern=".*\S.*" class="searchbox" placeholder="NAME#ID">
+      <div class="centered">
+        <div class="search">
+          <div class="title"></div>
+          <!-- FORM WITH SEARCH AND BUTTON -->
+          <form action="submit" class="form_ search-bar">
+            <input
+              type="search"
+              name="search"
+              pattern=".*\S.*"
+              class="searchbox"
+              placeholder="NAME#ID"
+            />
             <button class="search-btn" type="submit">
-                <i class="fa fa-search"></i>
+              <i class="fa fa-search"></i>
             </button>
-        </form>
-    
+          </form>
+        </div>
+        <!-- RANK IMAGE -->
+        <div class="rank">
+          <img src="Val_icons/Bronze 1.png" alt="" class="rankpic" />
+        </div>
+      </div>
     </div>
-</div>
-</div>
-<div class="split right">
-    <div class="centered">
-    <div class="player">
-        <div class="level text">100</div>
-        <div class="banner"></div>
-        <div class="name text">name</div>
-        <div class="rr text">20/100</div>
+    <div class="split right">
+      <div class="centered">
+        <div class="player">
+          <div class="level text">100</div>
+          <div class="banner"></div>
+          <div class="name text">name</div>
+          <div class="rr text">20/100</div>
+        </div>
+      </div>
     </div>
-</div>
-</div>
-</body>
+  </body>
 </html>

@@ -34,6 +34,9 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: block;
   }
   .banner{
       height: 640px;
@@ -77,4 +80,17 @@ button{
  border-radius: 0 5px 5px 0;
  cursor: pointer;
  text-align: center;
+}
+
+/* RANK IMAGE */
+.rank{
+  width: 100%;
+  min-height: 200px;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: block;
+  padding: 40px;
 }
