@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -39,16 +40,32 @@ body {
   display: block;
 }
 .banner {
-  height: 640px;
-  width: 268px;
+  min-width: 268px;
+  min-height: calc(70%);
   background: url("https://media.valorant-api.com/playercards/4dce4142-44bf-32e5-6f51-7e905389502c/largeart.png");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 /* all text */
 .text {
   font-size: 2rem;
   color: white;
   padding: 5px;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  background-color: rgb(45, 18, 18);
+  border-radius: 10px 10px 0px 0px;
+  height: 10%;
+}
+.name {
+  border-radius: 0px;
+}
+.rr {
+  border-radius: 0px 0px 10px 10px;
+}
+.player {
+  width: fit-content;
+  height: 80vh;
 }
 
 /* for the form */
