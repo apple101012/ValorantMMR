@@ -48,6 +48,7 @@ body {
 .text {
   font-size: 2rem;
   color: white;
+  padding: 5px;
 }
 
 /* for the form */
@@ -58,7 +59,7 @@ form {
 }
 input {
   width: 100%;
-  border: 3px solid rgb(27, 162, 27);
+  border: 3px solid rgb(187, 48, 33);
   border-right: none;
   padding: 5px;
   height: 3rem;
@@ -74,8 +75,8 @@ input:focus {
 button {
   padding: 5px;
   font-size: 1.5rem;
-  border: 1px solid rgb(27, 162, 27);
-  background: rgb(27, 162, 27);
+  border: 1px solid rgb(187, 48, 33);
+  background: rgb(187, 48, 33);
   color: white;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
