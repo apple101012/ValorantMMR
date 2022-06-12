@@ -71,7 +71,7 @@ body {
 /* for the form */
 form {
   position: relative;
-  width: 30rem;
+  width: 30vw;
   display: flex;
 }
 input {
@@ -102,7 +102,7 @@ button {
 
 /* RANK IMAGE */
 .rank {
-  width: 100%;
+  width: 30vw;
   min-height: 200px;
   justify-content: center;
   align-items: center;
@@ -110,5 +110,8 @@ button {
   background-size: cover;
   position: relative;
   display: block;
-  padding: 40px;
+  padding-top: 40px;
+}
+.rankpic {
+  min-width: 230px;
 }
