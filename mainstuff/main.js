@@ -35,7 +35,7 @@ window.onload = function () {
         //arrow down
         else rrtext.innerHTML = "RR = " + json.data.ranking_in_tier; //NO RR LOST OR GAINED
         nametext.innerHTML = json.data.name; //SET NAME
-        let tier = json.data.currenttierpatched.replace(" ", "%20"); //FOR RANK IMAGE
+        let tier = json.data.currenttierpatched.replace(" ", ""); //FOR RANK IMAGE
         rank.innerHTML = `<img src="Val_icons/${tier}.png" alt="" class="rankpic">`; //FOR RANK IMAGE
         // for the banner and account level
         const r2 = await fetch(`${apiUrl}account/${tag[0]}/${tag[1]}`); //fetch the account stats
