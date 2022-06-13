@@ -67,6 +67,13 @@ body {
   width: fit-content;
   height: 80vh;
 }
+/* MMR arrows */
+.fa-arrow-down {
+  color: red;
+}
+.fa-arrow-up {
+  color: green;
+}
 
 /* for the form */
 form {
