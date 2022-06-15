@@ -157,4 +157,7 @@ button {
     min-width: 268px;
     margin-top: 20px;
   }
+  .player {
+    margin-bottom: 20px;
+  }
 }
