@@ -4,9 +4,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+html,
 body {
   background: url(https://images6.alphacoders.com/107/1072679.jpg) no-repeat;
   background-size: cover;
+  width: 100%;
+  min-height: 100%;
+  background-position: center;
 }
 .split {
   height: 100%;
