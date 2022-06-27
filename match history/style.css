@@ -1,3 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@200&family=Montserrat:wght@100;300&display=swap");
 body {
   background-color: #44689a;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* THIS HOLDS ALL 5 MATCHES */
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+/* EACH MATCH BOX IS THIS */
+.flex-item {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(128, 0, 0, 0.356);
+  border-color: rgba(0, 0, 0, 0.397);
+  border-width: 2px;
+  border-style: solid;
+  margin: 5px;
+  min-width: 70vw;
+}
+/* KO PICTURE */
+.character-pic {
+  max-height: 113px;
+}
+/* ALL TEXT COLOR AND SIZE */
+.text {
+  color: white;
+  font-family: "Anek Malayalam", sans-serif;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+/* THIS IS TO MAKE THE TEXT ABOVE EACH OTHER */
+.winloss,
+.kda,
+.acs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.kda {
+  margin: 0px;
 }
