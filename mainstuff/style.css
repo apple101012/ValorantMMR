@@ -5,18 +5,21 @@
   box-sizing: border-box;
 }
 html,
-body {
-  background: url(https://images6.alphacoders.com/107/1072679.jpg) no-repeat;
-  background-size: cover;
+body,
+.container {
   width: 100%;
   min-height: 100vh;
   background-position: center;
+}
+.container {
+  background: url(https://images6.alphacoders.com/107/1072679.jpg) no-repeat;
+  background-size: cover;
 }
 @media (min-width: 911px) {
   .split {
     height: 100%;
     width: 50%;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     top: 0;
     overflow-x: hidden;
@@ -160,4 +163,51 @@ button {
   .player {
     margin-bottom: 20px;
   }
+}
+
+/* FOR THE MATCH HISTORY */
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #44689a;
+}
+/* EACH MATCH BOX IS THIS */
+.flex-item {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(128, 0, 0, 0.356);
+  border-color: rgba(0, 0, 0, 0.397);
+  border-width: 2px;
+  border-style: solid;
+  margin: 5px;
+  min-width: 70vw;
+}
+/* KO PICTURE */
+.character-pic {
+  max-height: 113px;
+}
+/* ALL TEXT COLOR AND SIZE */
+.text1 {
+  color: white;
+  font-family: "Anek Malayalam", sans-serif;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+/* THIS IS TO MAKE THE TEXT ABOVE EACH OTHER */
+.winloss,
+.kda,
+.acs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.kda {
+  margin: 0px;
 }
