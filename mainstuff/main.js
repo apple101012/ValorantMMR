@@ -65,13 +65,18 @@ window.onload = function () {
       let matches = [five, four, three, two, one];
       let flex = document.querySelector(".flex-container");
       let a = 0;
+      flex.innerHTML = "";
       for (i of matches) {
         let team = i.team;
         team = team.toLowerCase();
         let teamstats = json.data[a].teams[team];
         console.log(teamstats);
-        a++;
-        flex.innerHTML += `<div class="flex-item">
+
+        flex.innerHTML += `<div class="flex-item" style="background-color:${
+          teamstats.has_won
+            ? "rgba(0, 128, 0, 0.259)"
+            : "rgba(128, 0, 0, 0.356)"
+        }">
         <div class="character c1">
           <img
             src="${i.assets.agent.small}"
@@ -84,21 +89,23 @@ window.onload = function () {
         }/${i.stats.assists}</span></div>
         <div class="winloss winloss1 text1">
           ${teamstats.has_won ? "Victory" : "Defeat"}
-          <span class="score">${teamstats.rounds_won}/${
+          <span class="score">${teamstats.rounds_won}-${
           teamstats.rounds_lost
         }</span>
         </div>
-        <div class="acs text1">ACS <span class="acs1">200</span></div>
+        <div class="acs text1">ACS <span class="acs1">${Math.trunc(
+          i.stats.score / (teamstats.rounds_won + teamstats.rounds_lost)
+        )}</span></div>
 
         <div class="map">
           <img
-            src="https://static.wikia.nocookie.net/valorant/images/1/13/Loading_Screen_Icebox.png"
+            src="ValorantMaps/${json.data[a].metadata.map}.png}"
             alt=""
           />
         </div>
       </div>`;
+        a++;
       }
-      console.log(one);
     }
     doWork();
     matchHistory();
