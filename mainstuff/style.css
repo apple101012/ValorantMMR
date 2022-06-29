@@ -208,3 +208,7 @@ button {
 .kda {
   margin: 0px;
 }
+.map * {
+  max-width: 200px;
+  max-height: 113px;
+}

@@ -99,7 +99,7 @@ window.onload = function () {
 
         <div class="map">
           <img
-            src="ValorantMaps/${json.data[a].metadata.map}.png}"
+            src="ValorantMaps/${json.data[a].metadata.map}.png"
             alt=""
           />
         </div>
