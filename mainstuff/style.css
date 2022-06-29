@@ -147,12 +147,6 @@ button {
 
     text-align: center;
   }
-  .top {
-  }
-  .bottom {
-  }
-  .centered {
-  }
   .rank {
     min-width: 268px;
   }
@@ -173,6 +167,8 @@ button {
   flex-direction: column;
   flex-wrap: wrap;
   background-color: #44689a;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 /* EACH MATCH BOX IS THIS */
 .flex-item {
