@@ -51,31 +51,33 @@ window.onload = function () {
       }
     }
     async function matchHistory() {
+      //START OF THE MATCH HISTORY FUNCTION
       const response = await fetch(
-        `https://api.henrikdev.xyz/valorant/v3/matches/na/${tag[0]}/${tag[1]}?filter=competitive`
+        `https://api.henrikdev.xyz/valorant/v3/matches/na/${tag[0]}/${tag[1]}?filter=competitive` //Competitive only JSON
       );
       const json = await response.json();
       let one = json.data[4].players.all_players.find((x) => x.name == tag[0]); // player stats for match
-      let two = json.data[3].players.all_players.find((x) => x.name == tag[0]);
+      let two = json.data[3].players.all_players.find((x) => x.name == tag[0]); // player stats for match
       let three = json.data[2].players.all_players.find(
         (x) => x.name == tag[0]
       );
-      let four = json.data[1].players.all_players.find((x) => x.name == tag[0]);
-      let five = json.data[0].players.all_players.find((x) => x.name == tag[0]);
-      let matches = [five, four, three, two, one];
-      let flex = document.querySelector(".flex-container");
-      let a = 0;
+      let four = json.data[1].players.all_players.find((x) => x.name == tag[0]); // player stats for match
+      let five = json.data[0].players.all_players.find((x) => x.name == tag[0]); // player stats for match
+      let matches = [five, four, three, two, one]; // LIST OF ALL THE MATCHES JSON
+      let flex = document.querySelector(".flex-container"); //select the container with all the matches
+      let a = 0; //Needed to go through the victories
       flex.innerHTML = "";
       for (i of matches) {
+        //variable to go through all the players stats in the matches
         let team = i.team;
         team = team.toLowerCase();
-        let teamstats = json.data[a].teams[team];
+        let teamstats = json.data[a].teams[team]; //it gets the teamstats to get the victory or defeat
         console.log(teamstats);
 
         flex.innerHTML += `<div class="flex-item" style="background-color:${
           teamstats.has_won
             ? "rgba(0, 128, 0, 0.259)"
-            : "rgba(128, 0, 0, 0.356)"
+            : "rgba(128, 0, 0, 0.356)" //Choose color for win or loss (green then red)
         }">
         <div class="character c1">
           <img
@@ -85,26 +87,29 @@ window.onload = function () {
           />
         </div>
         <div class="kda text1">KDA <span class="kda1">${i.stats.kills}/${
-          i.stats.deaths
+          i.stats.deaths //KDA HTML
         }/${i.stats.assists}</span></div>
         <div class="winloss winloss1 text1">
           ${teamstats.has_won ? "Victory" : "Defeat"}
           <span class="score">${teamstats.rounds_won}-${
-          teamstats.rounds_lost
+          teamstats.rounds_lost //ROUNDS WON AND ROUNDS LOST
         }</span>
         </div>
         <div class="acs text1">ACS <span class="acs1">${Math.trunc(
+          //Calculate the ACS and then truncate it so no decimals
           i.stats.score / (teamstats.rounds_won + teamstats.rounds_lost)
         )}</span></div>
 
         <div class="map">
           <img
-            src="ValorantMaps/${json.data[a].metadata.map}.png"
+            src="ValorantMaps/${
+              json.data[a].metadata.map //Sets the map for the scoreboard
+            }.png"
             alt=""
           />
         </div>
       </div>`;
-        a++;
+        a++; //Moves onto next game to see if its victory or loss
       }
     }
     doWork();
