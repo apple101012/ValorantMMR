@@ -52,3 +52,18 @@ body {
 .kda {
   margin: 0px;
 }
+.character {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.rrchange {
+  margin-left: 15px;
+  color: rgb(9, 242, 9);
+  font-weight: bolder;
+}
+.rank-change {
+  max-height: 70px;
+  margin-left: 15px;
+}

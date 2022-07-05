@@ -183,9 +183,23 @@ button {
   margin: 5px;
   min-width: 70vw;
 }
-/* KO PICTURE */
+/* KO PICTURE AND RR AND PLAT LOGO*/
 .character-pic {
   max-height: 113px;
+}
+.character {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.rrchange {
+  margin-left: 15px;
+  font-weight: bolder;
+}
+.rank-change {
+  max-height: 70px;
+  margin-left: 15px;
 }
 /* ALL TEXT COLOR AND SIZE */
 .text1 {

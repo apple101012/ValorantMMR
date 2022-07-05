@@ -56,13 +56,25 @@ window.onload = function () {
         `https://api.henrikdev.xyz/valorant/v3/matches/na/${tag[0]}/${tag[1]}?filter=competitive` //Competitive only JSON
       );
       const json = await response.json();
-      let one = json.data[4].players.all_players.find((x) => x.name == tag[0]); // player stats for match
-      let two = json.data[3].players.all_players.find((x) => x.name == tag[0]); // player stats for match
-      let three = json.data[2].players.all_players.find(
-        (x) => x.name == tag[0]
+      const response1 = await fetch(
+        `https://api.henrikdev.xyz/valorant/v1/mmr-history/na/${tag[0]}/${tag[1]}`
       );
-      let four = json.data[1].players.all_players.find((x) => x.name == tag[0]); // player stats for match
-      let five = json.data[0].players.all_players.find((x) => x.name == tag[0]); // player stats for match
+      const mmr = await response1.json();
+      let one = json.data[4].players.all_players.find(
+        (x) => x.name.toLowerCase() == tag[0].toLowerCase()
+      ); // player stats for match
+      let two = json.data[3].players.all_players.find(
+        (x) => x.name.toLowerCase() == tag[0].toLowerCase()
+      ); // player stats for match
+      let three = json.data[2].players.all_players.find(
+        (x) => x.name.toLowerCase() == tag[0].toLowerCase()
+      );
+      let four = json.data[1].players.all_players.find(
+        (x) => x.name.toLowerCase() == tag[0].toLowerCase()
+      ); // player stats for match
+      let five = json.data[0].players.all_players.find(
+        (x) => x.name.toLowerCase() == tag[0].toLowerCase()
+      ); // player stats for match
       let matches = [five, four, three, two, one]; // LIST OF ALL THE MATCHES JSON
       let flex = document.querySelector(".flex-container"); //select the container with all the matches
       let a = 0; //Needed to go through the victories
@@ -73,7 +85,8 @@ window.onload = function () {
         team = team.toLowerCase();
         let teamstats = json.data[a].teams[team]; //it gets the teamstats to get the victory or defeat
         console.log(teamstats);
-
+        let mmrchange = mmr.data[a].mmr_change_to_last_game;
+        let rank = mmr.data[a].currenttierpatched.split(" ");
         flex.innerHTML += `<div class="flex-item" style="background-color:${
           teamstats.has_won
             ? "rgba(0, 128, 0, 0.259)"
@@ -85,6 +98,15 @@ window.onload = function () {
             alt=""
             class="character-pic"
           />
+           <img src="Val_Icons/${
+             rank[0] + rank[1]
+           }.png" alt="" class="rank-change" />
+            <span class="rrchange text1" style="color: ${
+              mmrchange > 0 ? "rgb(9, 242, 9)" : "rgb(255, 0, 98)" //if mmr greater tahn 0 then make it green or red
+            }"
+            >${
+              mmrchange > 0 ? "+" + mmrchange : mmrchange //if mmr is greater than 0 then add plus sign
+            }</span>
         </div>
         <div class="kda text1">KDA <span class="kda1">${i.stats.kills}/${
           i.stats.deaths //KDA HTML
