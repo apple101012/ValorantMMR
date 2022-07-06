@@ -67,3 +67,24 @@ body {
   max-height: 70px;
   margin-left: 15px;
 }
+
+@media (max-width: 850px) {
+  .flex-item {
+    overflow-x: scroll;
+    max-width: 90vw;
+    scrollbar-color: #21303e #0e1720;
+    outline: none;
+    scrollbar-width: thin;
+  }
+  .flex-item::-webkit-scrollbar {
+    height: 5px;
+  }
+  .flex-item::-webkit-scrollbar-track {
+    background: #0e1720;
+  }
+  .flex-item::-webkit-scrollbar-thumb {
+    background-color: #21303e;
+    border-radius: 20px;
+    border: 3px solid #21303e;
+  }
+}

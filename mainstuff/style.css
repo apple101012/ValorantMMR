@@ -15,7 +15,7 @@ body,
   background: url(https://images6.alphacoders.com/107/1072679.jpg) no-repeat;
   background-size: cover;
 }
-@media (min-width: 911px) {
+@media (min-width: 830px) {
   .split {
     height: 100%;
     width: 50%;
@@ -134,7 +134,7 @@ button {
 }
 
 /* TIME FOR MOBILE */
-@media (max-width: 910px) {
+@media (max-width: 830px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -156,6 +156,24 @@ button {
   }
   .player {
     margin-bottom: 20px;
+  }
+  .flex-item {
+    overflow-x: scroll;
+    max-width: 90vw;
+    scrollbar-color: #21303e #0e1720;
+    outline: none;
+    scrollbar-width: thin;
+  }
+  .flex-item::-webkit-scrollbar {
+    height: 5px;
+  }
+  .flex-item::-webkit-scrollbar-track {
+    background: #0e1720;
+  }
+  .flex-item::-webkit-scrollbar-thumb {
+    background-color: #21303e;
+    border-radius: 20px;
+    border: 3px solid #21303e;
   }
 }
 
