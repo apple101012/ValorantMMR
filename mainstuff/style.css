@@ -12,7 +12,7 @@ body,
   background-position: center;
 }
 .container {
-  background: url(https://images6.alphacoders.com/107/1072679.jpg) no-repeat;
+  background: url(images/valorantbackground.png) no-repeat;
   background-size: cover;
 }
 @media (min-width: 830px) {
